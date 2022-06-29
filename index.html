@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding cards</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            overflow: hidden;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            gap: 20px;
+            padding-inline: 20px;
+
+        }
+
+        .card {
+            height: 80vh;
+            position: relative;
+            flex: 0.5;
+            border-radius: 30px;
+            background-position: center;
+            transition: flex 5s ease-out;
+        }
+
+        h3 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .active {
+            flex: 5;
+
+        }
+
+        .active h3 {
+
+            opacity: 1;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2474&q=80')">
+            <h3>Exploreaza Lumea!</h3>
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80')">
+            <h3>Cucereste Natura!</h3>
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80')">
+            <h3>Deschide ochii si viseaza!</h3>
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80')">
+            <h3>Regaseaste-te!</h3>
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80')">
+            <h3>Asculta-ti Inima!</h3>
+        </div>
+    </div>
+</body>
+<script>
+
+    let cards = document.querySelectorAll(".card");
+    function removeActiveEffect() {
+        cards.forEach(card => {
+            card.classList.remove("active")
+        })
+    }
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            removeActiveEffect();
+            card.classList.toggle("active")
+        })
+    })
+</script>
+
+</html>
