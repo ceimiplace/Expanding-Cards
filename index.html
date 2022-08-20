@@ -1,145 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expanding cards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-
-        padding-inline: 20px;
-      }
-
-      .card {
-        height: 100%;
-        position: relative;
-        flex: 0.5;
-        display: flex;
-
-        flex-direction: column;
-        background-position: center;
-        transition: flex 2s ease-out;
-      }
-      .card p {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 1s ease;
-      }
-      .card p:first-child {
-        transform: translateY(-100%);
-      }
-      .card p:last-child {
-        transform: translateY(100%);
-      }
-      .active {
-        flex: 5;
-      }
-      .active p:first-child {
-        transform: translateY(0);
-      }
-      .active p:last-child {
-        transform: translateY(0);
-      }
-      p {
-        text-transform: uppercase;
-        color: white;
-        font-size: 50px;
-        font-family: "Anton", sans-serif;
-      }
-    </style>
-  </head>
-
-  <body>
+<body>
     <div class="container">
-      <div
-        class="card"
-        style="
+        <div class="card" style="
           background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2474&q=80');
-        "
-      >
-        <p>Try</p>
-        <p>Something</p>
-        <p>New</p>
-      </div>
-      <div
-        class="card"
-        style="
+        ">
+            <p>Try</p>
+            <p>Something</p>
+            <p>New</p>
+        </div>
+        <div class="card" style="
           background-image: url('https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
-        "
-      >
-        <p>Appreciate</p>
-        <p>the</p>
-        <p>moment</p>
-      </div>
-      <div
-        class="card"
-        style="
+        ">
+            <p>Appreciate</p>
+            <p>the</p>
+            <p>moment</p>
+        </div>
+        <div class="card" style="
           background-image: url('https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80');
-        "
-      >
-        <p>Never</p>
-        <p>Give</p>
-        <p>up</p>
-      </div>
-      <div
-        class="card"
-        style="
+        ">
+            <p>Never</p>
+            <p>Give</p>
+            <p>up</p>
+        </div>
+        <div class="card" style="
           background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
-        "
-      >
-        <p>Succes</p>
-        <p>breeds</p>
-        <p>succes</p>
-      </div>
-      <div
-        class="card"
-        style="
+        ">
+            <p>Succes</p>
+            <p>breeds</p>
+            <p>succes</p>
+        </div>
+        <div class="card" style="
           background-image: url('https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80');
-        "
-      >
-        <p>Now</p>
-        <p>or</p>
-        <p>never</p>
-      </div>
+        ">
+            <p>Now</p>
+            <p>or</p>
+            <p>never</p>
+        </div>
     </div>
-  </body>
-  <script>
-    let cards = document.querySelectorAll(".card");
+    <script src="./script.js">
 
-    function removeActiveEffect() {
-      cards.forEach((card) => {
-        card.classList.remove("active");
-      });
-    }
+    </script>
+</body>
 
-    cards.forEach((card) => {
-      card.addEventListener("click", () => {
-        if (card.classList.contains("active")) {
-          card.classList.remove("active");
-        } else {
-          removeActiveEffect();
-          card.classList.add("active");
-        }
-      });
-    });
-  </script>
+
 </html>
