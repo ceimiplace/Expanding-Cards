@@ -55,7 +55,7 @@
 p {
   text-transform: uppercase;
   color: white;
-  font-size: 50px;
+  font-size: clamp(30px, 3vw, 50px);
   font-family: "Anton", sans-serif;
 }
 .card-mountain {
