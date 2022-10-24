@@ -9,8 +9,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-
-  padding-inline: 20px;
+  overflow: hidden;
+  padding: 20px;
 }
 
 .card {
@@ -57,4 +57,19 @@ p {
   color: white;
   font-size: 50px;
   font-family: "Anton", sans-serif;
+}
+.card-mountain {
+  background-image: url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2474&q=80");
+}
+.card-woods {
+  background-image: url("https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+}
+.card-sunset {
+  background-image: url("https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80");
+}
+.card-tree {
+  background-image: url("https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+}
+.card-beach {
+  background-image: url("https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
 }
