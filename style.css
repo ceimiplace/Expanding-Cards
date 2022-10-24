@@ -73,3 +73,13 @@ p {
 .card-beach {
   background-image: url("https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
 }
+.card-mountain,
+.card-beach {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .card-mountain,
+  .card-beach {
+    display: FLEX;
+  }
+}
